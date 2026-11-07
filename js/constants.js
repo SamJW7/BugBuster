@@ -203,7 +203,7 @@ body {
   <div id="main-header">
     <img src="banner.jpg"></img> 
     <img alt="Missing src attribute">
-    <h1>Welcome to BugBuster 10.0</div> 
+    <h1>Welcome to BugBuster 9.0</div> 
   </div>
 
   <p>
@@ -247,7 +247,7 @@ body {
   BB.SAMPLE_FULL_BUGGY = `<!DOCTYPE html>
 <html>
 <head>
-  <title>BugBuster 10.0 Test Page</title>
+  <title>BugBuster 9.0 Test Page</title>
   <link>
   <style>
     /* CSS Gap 1 & 2: Misspelled property, invalid keyword, and invalid measurement unit */
@@ -295,7 +295,7 @@ body {
   <!-- HTML Gap 3: Element missing mandatory structural attributes -->
   <div id="main-header">
     <img alt="Missing src image">
-    <h1>Welcome to BugBuster 10.0</div> 
+    <h1>Welcome to BugBuster 9.0</div> 
   </div>
 
   <p>
