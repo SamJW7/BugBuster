@@ -192,8 +192,14 @@
         <input type="checkbox" id="teacher-toggle" class="toggle-checkbox" checked>
       </label>
 
+      <!-- About Modal Button -->
+      <button class="btn btn-header-about" id="btn-about-open" title="About BugBuster, Authors & Research Team">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>About</span>
+      </button>
+
       <!-- Settings Button -->
-      <button class="btn btn-outline" id="btn-settings-open" title="Open Settings (Font size & Appearance)">
+      <button class="btn btn-outline" id="btn-settings-open" title="Open Settings (Lighting, Font size & Appearance)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         <span>Settings</span>
       </button>
@@ -277,13 +283,21 @@
           </button>
         </div>
 
-        <div class="drawer-section-title" style="margin-top:10px;">Settings & Export</div>
+        <div class="drawer-section-title" style="margin-top:10px;">Project & Settings</div>
         <div class="drawer-items-grid">
+          <button class="drawer-tool-card" data-tool="about">
+            <span class="drawer-tool-icon">ℹ️</span>
+            <div class="drawer-tool-text">
+              <span class="drawer-tool-name">About & Authors</span>
+              <span class="drawer-tool-desc">Grade 12 Generous Prenza NHS & Contacts</span>
+            </div>
+            <span class="drawer-tool-arrow">›</span>
+          </button>
           <button class="drawer-tool-card" data-tool="settings">
             <span class="drawer-tool-icon">⚙️</span>
             <div class="drawer-tool-text">
-              <span class="drawer-tool-name">Settings & Font Size</span>
-              <span class="drawer-tool-desc">Dark/Light theme, Taglish, 11-22px font</span>
+              <span class="drawer-tool-name">Settings & Lighting</span>
+              <span class="drawer-tool-desc">Theme, brightness slider, Taglish, font</span>
             </div>
             <span class="drawer-tool-arrow">›</span>
           </button>
@@ -303,7 +317,6 @@
         <div class="drawer-viewport-header" id="drawer-viewport-header">
           <button class="drawer-back-btn" id="drawer-back-btn" title="Back to Tools Menu">← Back to Menu</button>
           <span class="drawer-viewport-title" id="drawer-viewport-title">Tool Name</span>
-          <button class="drawer-close-btn" id="drawer-viewport-close-btn" title="Close" aria-label="Close">✕</button>
         </div>
         <div class="drawer-viewport-content" id="drawer-viewport-content">
           <!-- Active tool view dynamically mounted here -->
@@ -325,7 +338,7 @@
         <div class="editor-toolbar">
           <button class="btn btn-success" id="btn-autofix-all" title="Fix all automated W3C issues">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 18v4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M18 12h4"/><path d="m19.07 4.93-2.83 2.83"/></svg>
-            <span>Auto-Fix</span>
+            <span>Auto-Fix All</span>
           </button>
           <button class="btn btn-outline" id="btn-format" title="Format & Align Code">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="7" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="7" y2="18"/></svg>
@@ -527,8 +540,8 @@
     <div class="modal-box">
       <div class="modal-header">
         <div class="modal-title" id="modal-settings-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          <span>Settings & Visual Accessibility</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings & Lighting Accessibility</span>
         </div>
         <button class="modal-close-btn" id="btn-settings-close" title="Close Settings">✕</button>
       </div>
@@ -574,7 +587,28 @@
           </div>
         </div>
 
-        <!-- Setting 2: Language Selector -->
+        <!-- Setting 2: Draggable Lighting / Phone-like Brightness Slider -->
+        <div class="setting-group" id="setting-group-lighting">
+          <div class="setting-label">
+            <span>Draggable Lighting (Phone-Like Brightness)</span>
+            <span class="font-size-val-pill" id="brightness-val-indicator">100%</span>
+          </div>
+          <div class="setting-desc">Drag the brightness slider smoothly to simulate phone display lighting (35% dim to 160% intense brightness) for eye comfort and accurate visual inspection.</div>
+          <div class="brightness-slider-container">
+            <span class="brightness-icon">🔅</span>
+            <input type="range" min="35" max="160" value="100" step="1" id="lighting-brightness-slider" class="brightness-slider" aria-label="Draggable Lighting Slider">
+            <span class="brightness-icon">🔆</span>
+          </div>
+          <div class="brightness-presets-row">
+            <button class="brightness-preset-btn" data-brightness="50">🌙 Night (50%)</button>
+            <button class="brightness-preset-btn" data-brightness="75">🛋️ Dim (75%)</button>
+            <button class="brightness-preset-btn active" data-brightness="100">☀️ Normal (100%)</button>
+            <button class="brightness-preset-btn" data-brightness="125">💡 Bright (125%)</button>
+            <button class="brightness-preset-btn" data-brightness="150">⚡ High (150%)</button>
+          </div>
+        </div>
+
+        <!-- Setting 3: Language Selector -->
         <div class="setting-group">
           <div class="setting-label">
             <span>Explanation Language</span>
@@ -591,7 +625,7 @@
           </div>
         </div>
 
-        <!-- Setting 3: Teacher Mode Toggle -->
+        <!-- Setting 4: Teacher Mode Toggle -->
         <div class="setting-group">
           <div class="setting-label">
             <span>Teacher Mode (Deep-Dive Analysis)</span>
@@ -602,7 +636,7 @@
           <div class="setting-desc">Reveal comprehensive root cause breakdowns, W3C specification badges, and step-by-step layout explanations on every diagnostic card.</div>
         </div>
 
-        <!-- Setting 4: Continuous App-Wide Font Size Slider -->
+        <!-- Setting 5: Continuous App-Wide Font Size Slider -->
         <div class="setting-group">
           <div class="setting-label">
             <span>Global App Font Size</span>
@@ -623,7 +657,7 @@
           </div>
         </div>
 
-        <!-- Setting 5: Live Preview Box -->
+        <!-- Setting 6: Live Preview Box -->
         <div class="setting-group">
           <div class="setting-label">
             <span>Live Typography Preview</span>
@@ -631,7 +665,7 @@
           <div class="settings-preview-card">
             <div class="settings-preview-title" id="preview-sample-title">Missing Semicolon (;) in CSS Declaration</div>
             <div class="settings-preview-body" id="preview-sample-body">
-              This preview reflects your chosen app-wide font size and theme contrast in real-time. Both the code editor and UI controls scale proportionally.
+              This preview reflects your chosen app-wide font size, brightness lighting, and theme contrast in real-time. Both the code editor and UI controls scale proportionally.
             </div>
           </div>
         </div>
@@ -644,10 +678,116 @@
     </div>
   </div>
 
+  <!-- Dedicated About & Research Team Modal -->
+  <div class="modal-backdrop" id="about-modal" role="dialog" aria-modal="true" aria-labelledby="modal-about-title">
+    <div class="modal-box about-modal-box">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-about-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>About BugBuster 9.0 & Research Team</span>
+        </div>
+        <button class="modal-close-btn" id="btn-about-close" title="Close About">✕</button>
+      </div>
+
+      <div class="about-modal-body">
+        <div class="about-hero-card">
+          <div class="about-hero-icon">🛡️</div>
+          <div class="about-hero-info">
+            <div class="about-hero-title">
+              <span>BugBuster 9.0</span>
+              <span class="about-pill pill-accent">W3C Standards Engine</span>
+            </div>
+            <div class="about-hero-subtitle">
+              A 100% offline client-side code validation, diagnostics, and educational mentoring platform designed for web development students and aspiring programmers.
+            </div>
+          </div>
+        </div>
+
+        <div class="about-section-heading">
+          <span>👥 Authors & Product Development Team</span>
+        </div>
+        <div class="about-card">
+          <div style="font-size:14px; font-weight:800; color:var(--text-main);">Grade 12 Generous — Group 2</div>
+          <div style="font-size:12px; color:var(--text-muted); line-height:1.5;">
+            <strong>Prenza National High School</strong> (Prenza I, Marilao, Bulacan).<br>
+            This software is developed as an academic research project for senior high school <strong>Product Development</strong>, providing real-time W3C diagnostics, Taglish/English mentoring, and responsive web inspection without requiring internet connectivity or external server infrastructure.
+          </div>
+          <div class="about-badge-list">
+            <span class="about-pill">🏫 Prenza National High School</span>
+            <span class="about-pill">🎓 Grade 12 Generous</span>
+            <span class="about-pill">🧪 Group 2 Research Project</span>
+            <span class="about-pill">🚀 Product Development</span>
+          </div>
+        </div>
+
+        <div class="about-section-heading">
+          <span>📬 Official Contact Information</span>
+        </div>
+        <div class="about-card">
+          <div class="about-contact-row">
+            <div class="about-contact-left">
+              <div class="about-contact-icon">✉️</div>
+              <div class="about-contact-info">
+                <span class="about-contact-label">Email Address</span>
+                <a class="about-contact-value" href="mailto:samuelconcepcion43@gmail.com">samuelconcepcion43@gmail.com</a>
+              </div>
+            </div>
+            <button class="about-copy-btn" id="btn-copy-email" title="Copy email address">
+              <span>📋 Copy</span>
+            </button>
+          </div>
+
+          <div class="about-contact-row">
+            <div class="about-contact-left">
+              <div class="about-contact-icon">📞</div>
+              <div class="about-contact-info">
+                <span class="about-contact-label">Contact Number</span>
+                <a class="about-contact-value" href="tel:+639947484170">+63 9947484170</a>
+              </div>
+            </div>
+            <button class="about-copy-btn" id="btn-copy-phone" title="Copy phone number">
+              <span>📋 Copy</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="about-section-heading">
+          <span>✨ Core Highlights</span>
+        </div>
+        <div class="about-card" style="font-size:12px; color:var(--text-muted); line-height:1.5;">
+          <ul style="padding-left:18px; display:flex; flex-direction:column; gap:6px;">
+            <li><strong>100% Pure Standalone Offline:</strong> No CDNs, no external tracking, no backend server or API dependencies needed.</li>
+            <li><strong>Draggable Lighting:</strong> Phone-like brightness slider (35% to 160%) for eye comfort and accurate visual inspection.</li>
+            <li><strong>W3C Validation Engine:</strong> Checks unclosed tags, void tags, attribute quotes, nesting errors, CSS properties, specificity, and typos.</li>
+            <li><strong>Taglish & English Mentoring:</strong> Clear bilingual explanations with Teacher Mode deep-dive root cause analysis.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="btn-about-done" style="font-size:11.5px; padding:6px 16px;">Close</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
-    <span>100% Client-Side Pure Local Engine • Zero External Server Network Calls</span>
-    <span>W3C HTML5 & CSS3 Verified Standards • BugBuster 9.0</span>
+    <div class="footer-left">
+      <button class="footer-about-btn" id="footer-about-trigger" title="View Authors & Project Info">
+        <span>ℹ️ About Research Team</span>
+      </button>
+      <span><strong>BugBuster 9.0</strong> · Product Development Research Project</span>
+      <span>Grade 12 Generous · Prenza National High School (Group 2)</span>
+    </div>
+    <div class="footer-right">
+      <a class="footer-contact-link" href="mailto:samuelconcepcion43@gmail.com" title="Send email">
+        <span>✉️ samuelconcepcion43@gmail.com</span>
+      </a>
+      <span>•</span>
+      <a class="footer-contact-link" href="tel:+639947484170" title="Call or text">
+        <span>📞 +63 9947484170</span>
+      </a>
+    </div>
   </footer>
 
   <!-- Modular Scripts with Defer (Relative paths & standard script tags ensure 100% offline file:/// compatibility) -->
