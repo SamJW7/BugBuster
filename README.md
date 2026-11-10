@@ -1,28 +1,26 @@
-BUGBUSTER (v8.9) — HANDS-ON TRIAL & USER GUIDELINES
+BUGBUSTER — HANDS-ON TRIAL & USER GUIDELINES
 Single-File Portable Offline Web Debugging Assistant
-File Name: BugBuster8.9.html
 
-================================================================================
+
 1. OVERVIEW & PURPOSE
-================================================================================
+
 BugBuster is a single-file, zero-dependency web debugging tool designed for Grade
 12 TVL-ICT students learning HTML and CSS. It operates 100% offline inside any
 standard web browser. It helps students identify, locate, understand, and fix common
 coding errors without requiring internet access or software installation.
 
 
-================================================================================
 2. SYSTEM REQUIREMENTS
-================================================================================
+
 - Operating System: Windows, macOS, Linux, Android, or iOS.
 - Web Browser: Any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, or Apple Safari).
 - Network: Internet connection is NOT required.
 - Dependencies: None (No external servers, libraries, or installations needed).
 
 
-================================================================================
+
 3. GETTING STARTED & LAUNCH INSTRUCTIONS
-================================================================================
+
 [Desktop / Laptop Users]
 1. Download or copy "BugBuster8.9.html" from Google Drive or a USB flash drive.
 2. Save the file to a convenient location (e.g., Desktop or Downloads folder).
@@ -35,9 +33,8 @@ coding errors without requiring internet access or software installation.
 3. The application will automatically adapt its layout to fit mobile screen dimensions.
 
 
-================================================================================
 4. STEP-BY-STEP TRIAL & TESTING GUIDELINES
-================================================================================
+
 Step 1: Load Sample Code
 - Click the "Buggy Test" button on the top toolbar or select a starter template from
 - the dropdown menu. This populates the code editor with sample HTML and CSS containing
@@ -58,9 +55,9 @@ Step 3: Test Interactive Features
 - Try Custom Code: Clear the editor and paste your own HTML or CSS code to test real-time diagnostic feedback.
 
 
-================================================================================
+
 5. KEY TOOL FEATURES AT A GLANCE
-================================================================================
+
 - Line-by-Line Error Detection & Highlighting
 - Bilingual Diagnostic Feedback (English / Taglish)
 - Automated One-Click Code Correction (Auto-Fix)
